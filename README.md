@@ -1,4 +1,4 @@
-# VestaCP Dashboard Widget
+# VestaCP Dashboard Widget for WordPress
 
 ![Alt text](banner-772x250.jpg)
 
