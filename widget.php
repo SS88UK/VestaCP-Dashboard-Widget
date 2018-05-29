@@ -120,7 +120,7 @@ function ss88_vestacp_widget_showbars($Data, $Vesta)
 	$BWPercent = ($BWPercent>100) ? 100 : $BWPercent;
 	$BWPercent = ($Data['BANDWIDTH']=='unlimited') ? 'U' : $BWPercent;
 	
-	$DBPercent = (($Data['U_DISK_DB'] / $Data['DATABASES']) * 100);
+	$DBPercent = (($Data['U_DATABASES'] / $Data['DATABASES']) * 100);
 	$DBPercent = ($DBPercent>100) ? 100 : $DBPercent;
 	$DBPercent = ($Data['DATABASES']=='unlimited') ? 'U' : $DBPercent;
 	
@@ -143,7 +143,7 @@ function ss88_vestacp_widget_showbars($Data, $Vesta)
 
 	<div class="bar-main-container azure ss88_vw_disk" tooltip="'.ss88_add_vestacp_widget_formatBytes($Data['U_DISK']).' / '.ss88_add_vestacp_widget_formatBytes($Data['DISK_QUOTA']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$DiskPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
 	<div class="bar-main-container emerald ss88_vw_bw" tooltip="'.ss88_add_vestacp_widget_formatBytes($Data['U_BANDWIDTH']).' / '.ss88_add_vestacp_widget_formatBytes($Data['BANDWIDTH']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$BWPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
-	<div class="bar-main-container violet ss88_vw_bw" tooltip="'.($Data['U_DISK_DB']).' / '.($Data['DATABASES']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$DBPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
+	<div class="bar-main-container violet ss88_vw_bw" tooltip="'.($Data['U_DATABASES']).' / '.($Data['DATABASES']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$DBPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
 	<div class="bar-main-container yellow ss88_vw_bw" tooltip="'.($Data['U_WEB_DOMAINS']).' / '.($Data['WEB_DOMAINS']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$WDPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
 	<div class="bar-main-container red ss88_vw_bw" tooltip="'.($Data['U_MAIL_ACCOUNTS']).' / '.($Data['MAIL_ACCOUNTS']).'"><div class="bar-wrap"><div class="bar-percentage" data-percentage="'.$MPercent.'"></div><div class="bar-container"><div class="bar"></div></div></div></div>
 	
