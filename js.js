@@ -34,7 +34,9 @@ jQuery('.ss88_vw_form').submit(function(e) {
 	
 	var th = jQuery(this);
 	
-	var posting = jQuery.post( th.attr('action'), { action: 'ss88_vestacp_widget_ajax', nonce: jQuery('input[name=ss88_vestacp_widget_nonce]').val(), v_url: jQuery('input[name=ss88_vestacp_widget_vesta_url]').val(), v_username: jQuery('input[name=ss88_vestacp_widget_vesta_username]').val(), v_hash: jQuery('input[name=ss88_vestacp_widget_vesta_hash]').val() } );
+	var cbAns = ( jQuery('input[name=ss88_vestacp_widget_vesta_verifyssl]').is(':checked') ) ? 1 : 0;
+	
+	var posting = jQuery.post( th.attr('action'), { action: 'ss88_vestacp_widget_ajax', nonce: jQuery('input[name=ss88_vestacp_widget_nonce]').val(), v_url: jQuery('input[name=ss88_vestacp_widget_vesta_url]').val(), v_username: jQuery('input[name=ss88_vestacp_widget_vesta_username]').val(), v_hash: jQuery('input[name=ss88_vestacp_widget_vesta_hash]').val(), v_verifyssl: cbAns } );
 	
 	jQuery('.ss88_vw_form input[type=submit]').attr('disabled', true);
 	
