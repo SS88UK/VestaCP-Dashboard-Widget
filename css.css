@@ -81,11 +81,11 @@
 	cursor:pointer;
 }
 
-.k2 { width: 225px; margin: auto; margin-top: 30px; }
+.k2 { margin: auto; margin-top: 30px; display:flex; justify-content:center; }
 
-.ss88_spinner {
+#ss88_vestacp_widget .ss88_spinner {
   width: 100%;
-  height: 83%;
+  height: 90%;
   background: rgba(255, 255, 255, 0.66);
   position: absolute;
   top:0;
@@ -277,5 +277,3 @@
 [tooltip][flow^="right"]:hover::after {
   animation: tooltips-horz 300ms ease-out forwards;
 }
-
-
